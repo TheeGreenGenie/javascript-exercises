@@ -1,16 +1,15 @@
-const sumAll = function(num1, num2) {
+const sumAll = function(minimum, maximum) {
     let sum = 0;
-    if (num1 < 0 || num2 < 0 || typeof(num1) != 'number' || typeof(num2) != 'number') {
+    if (minimum < 0 || maximum < 0 || typeof(minimum) != 'number' || typeof(maximum) != 'number') {
         return "ERROR"
     }
-    if (num1>num2) {
-        [num1, num2] = [num2, num1]
+    if (minimum>maximum) {
+        [minimum, maximum] = [maximum, minimum]
     }
-    for (let i=num1; i <= num2; i++) {
+    for (let i=minimum; i <= maximum; i++) {
         sum+=i
     }
     return sum
 };
-
 // Do not edit below this line
 module.exports = sumAll;
