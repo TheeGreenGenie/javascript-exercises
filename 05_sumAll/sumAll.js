@@ -1,11 +1,10 @@
 const sumAll = function(minimum, maximum) {
     let sum = 0;
-    if (minimum < 0 || maximum < 0 || typeof(minimum) != 'number' || typeof(maximum) != 'number') {
-        return "ERROR"
-    }
+    if (minimum < 0 || maximum < 0 || typeof(minimum) != 'number' || typeof(maximum) != 'number') return "ERROR";
     if (minimum>maximum) {
         [minimum, maximum] = [maximum, minimum]
     }
+    /* Adds every number from the min to max number*/
     for (let i=minimum; i <= maximum; i++) {
         sum+=i
     }
